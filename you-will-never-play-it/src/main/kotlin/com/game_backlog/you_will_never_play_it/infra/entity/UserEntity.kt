@@ -9,18 +9,22 @@ import java.time.LocalDate
 data class UserEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null,
-    val name: String? = null,
-    val age: Int? = null,
-    val bornDate: LocalDate? = null,
-    val username: String? = null,
-    val password: String? = null,
-    val email: String? = null,
-    val about: String? = null,
+    val id: Long = 0,
+    val name: String = "",
+    val age: Int = 0,
+    val bornDate: LocalDate = LocalDate.now(),
+    val username: String = "",
+    val password: String = "",
+    val email: String = "",
+    val about: String? = "",
 ) {
+    constructor() : this(0,"",0, LocalDate.now(),"","","","") {
+
+    }
+
     companion object {
         fun fromDomainClass(domainClass: User) : UserEntity {
-            return UserEntity(domainClass.id, domainClass.name, domainClass.age, domainClass.bornDateTime, domainClass.username, domainClass.about)
+            return UserEntity(domainClass.id, domainClass.name, domainClass.age, domainClass.bornDate, domainClass.username, domainClass.password, domainClass.email, domainClass.about)
         }
     }
 }

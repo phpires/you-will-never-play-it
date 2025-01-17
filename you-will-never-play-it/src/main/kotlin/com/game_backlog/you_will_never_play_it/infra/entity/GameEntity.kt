@@ -9,13 +9,13 @@ import java.time.LocalDate
 data class GameEntity(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private val id: Long? = null,
-        private val title: String? = null,
-        private val genre: String? = null,
-        private val developer: String? = null,
-        private val launchDate: LocalDate? = null) {
+        val id: Long,
+        val title: String,
+        val genre: String,
+        val developer: String,
+        val launchDate: LocalDate) {
+        constructor() : this(0, "", "", "", LocalDate.now()) {
 
-        fun fromDomainClass(game: Game) : GameEntity {
-                return GameEntity()
         }
+
 }
