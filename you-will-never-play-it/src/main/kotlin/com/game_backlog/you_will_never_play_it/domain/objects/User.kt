@@ -5,7 +5,6 @@ import java.time.LocalDate
 class User(
     var id: Long = 0,
     var name: String = "",
-    var age: Int = 0,
     var bornDate: LocalDate,
     var username: String = "",
     var password: String = "",

@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-@Configuration
+//@Configuration
 class CommandInjection {
 
-    @Autowired
-    private lateinit var userRepository: UserRepository
+//    @Autowired
+//    private lateinit var userRepository: UserRepository
 
-    @Bean
-    fun createUserCommand() : CreateUserCommand {
-        return CreateUserCommand(this.userRepository)
-    }
+//    @Bean
+//    fun createUserCommand() : CreateUserCommand {
+//        return CreateUserCommand(this.userRepository)
+//    }
 }

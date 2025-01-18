@@ -1,8 +1,8 @@
 version: '3.9'
 
 services:
-  kotlinapp:
-    container_name: kotlinapp
+  you_will_never_play_it:
+    container_name: you_will_never_play_it
     build: # this is the build context: .
       context: .
       dockerfile: Dockerfile

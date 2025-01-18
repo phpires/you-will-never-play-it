@@ -1,4 +1,4 @@
-package com.game_backlog.you_will_never_play_it.resources
+package com.game_backlog.you_will_never_play_it.controllers
 
 import com.game_backlog.you_will_never_play_it.domain.commands.users.CreateUserCommand
 import com.game_backlog.you_will_never_play_it.domain.objects.User
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import java.net.URI
 
 @RestController
 @RequestMapping("/users")
